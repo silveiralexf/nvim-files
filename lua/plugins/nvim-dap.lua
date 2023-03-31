@@ -17,8 +17,25 @@ return {
   },
   config = function()
     require('dapui').setup()
-    require('dap-go').setup { external_config = { enabled = true } }
-    require('nvim-dap-virtual-text').setup()
+    require('dap-go').setup {
+      dap_configurations = {
+        type = "go",
+        name = "Attach remote",
+        mode = "remote",
+        request = "attach",
+      },
+      external_config = {
+        enabled = true
+      }
+    }
+    require('nvim-dap-virtual-text').setup {
+      enabled = true,
+      enabled_commands = true,
+      highlight_changed_variables = true,
+      highlight_new_as_changed = true,
+      show_stop_reason = true,
+      all_references = false,
+    }
 
     local dap = require 'dap'
     local dapui = require 'dapui'
