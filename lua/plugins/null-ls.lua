@@ -19,6 +19,12 @@ return {
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.formatting.shfmt,
         null_ls.builtins.formatting.stylua,
+        null_ls.builtins.formatting.yamlfmt.with({
+          extra_args = {
+            "-formatter",
+            "retain_line_breaks=true",
+          }
+        }),
         null_ls.builtins.formatting.yapf,
       },
     }
