@@ -93,3 +93,11 @@ vim.api.nvim_create_autocmd('BufEnter', {
     vim.cmd [[setlocal colorcolumn=120]]
   end,
 })
+
+vim.api.nvim_create_autocmd('BufRead,BufNewFile', {
+  pattern = { '*/templates/*.yml','*/templates/*.yaml', '*/templates/*.tpl', '*.gotmpl', 'helmfile*.yaml' },
+  callback = function()
+    vim.opt_local.filetype = 'helm'
+  end,
+})
+
