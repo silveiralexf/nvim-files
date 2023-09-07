@@ -2,7 +2,6 @@ local servers = {
   'bashls',
   'dockerls',
   'gopls',
-  -- 'grammarly', -- doesn't work with nodejs 19
   'helm_ls',
   'groovyls',
   'jdtls',

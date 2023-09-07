@@ -3,7 +3,7 @@ local sign_define = vim.fn.sign_define
 
 d.config({
   signs = true,
-  underline = false,
+  underline = true,
   update_in_insert = false,
   severity_sort = false,
   virtual_text = true, -- lsp_line will do this.

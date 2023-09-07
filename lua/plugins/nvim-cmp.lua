@@ -89,17 +89,17 @@ return {
       },
       snippet = {
         expand = function(args)
-         luasnip.lsp_expand(args.body)
+          luasnip.lsp_expand(args.body)
         end,
       },
       mapping = {
-            ['<Up>'] = cmp.mapping.select_prev_item(),
-            ['<Down>'] = cmp.mapping.select_next_item(),
-            ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 's' }),
-            ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-1), { 'i', 'c' }),
-            ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(1), { 'i', 'c' }),
-            ['<C-q>'] = cmp.mapping.close(),
-            ['<Tab>'] = cmp.mapping(function(fallback)
+        ['<Up>'] = cmp.mapping.select_prev_item(),
+        ['<Down>'] = cmp.mapping.select_next_item(),
+        ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 's' }),
+        ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-1), { 'i', 'c' }),
+        ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(1), { 'i', 'c' }),
+        ['<C-q>'] = cmp.mapping.close(),
+        ['<Tab>'] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()
           elseif luasnip.expandable() then
@@ -112,7 +112,7 @@ return {
             fallback()
           end
         end, { 'i', 's' }),
-            ['<S-Tab>'] = cmp.mapping(function(fallback)
+        ['<S-Tab>'] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item()
           elseif luasnip.jumpable(-1) then
@@ -121,12 +121,12 @@ return {
             fallback()
           end
         end, { 'i', 's' }),
-            ['<CR>'] = cmp.mapping.confirm { select = true },
+        ['<CR>'] = cmp.mapping.confirm { select = true },
       },
       sources = {
-        { name = 'nvim_lsp', priority = 900 },
+        { name = 'nvim_lsp',                priority = 900 },
         { name = 'nvim_lsp_signature_help', priority = 1000 },
-        { name = 'luasnip',  priority = 750 },
+        { name = 'luasnip',                 priority = 750 },
         {
           name = 'buffer',
           option = {

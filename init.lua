@@ -7,7 +7,7 @@
 
 -- Leader key configuation
 -- https://learnvimscriptthehardway.stevelosh.com/chapters/06.html
-vim.g.mapleader = '\\' -- Define leader key.
+vim.g.mapleader = '\\'     -- Define leader key.
 vim.g.localmapleader = ',' -- Define local leader.
 
 -- Some plugins require termguicolor to be set before load.
@@ -58,9 +58,9 @@ require('lazy').setup('plugins', {
 })
 
 local sources = {
-  'icons', -- Load custom icons
+  'icons',    -- Load custom icons
   'settings', -- Vim settings
-  'lsp', -- LSP configuration
+  'lsp',      -- LSP configuration
   'mappings', -- Vim mappings
   'autocmds', -- Magic from autocommands
   'commands', -- custom commands
