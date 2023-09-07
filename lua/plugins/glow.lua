@@ -4,6 +4,6 @@ return {
   cmd = 'Glow',
   opts = {
     style = "dark",
-    width = 120,
+    width = 220,
   }
 }

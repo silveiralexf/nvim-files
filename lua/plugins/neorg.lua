@@ -22,7 +22,7 @@ return {
         config = {
           zen_mode = 'zen-mode',
         },
-      }, -- Presentations
+      },                  -- Presentations
       ['core.dirman'] = { -- Manages Neorg workspaces
         config = {
           workspaces = {

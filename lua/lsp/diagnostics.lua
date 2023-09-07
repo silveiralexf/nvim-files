@@ -2,10 +2,11 @@ local d = vim.diagnostic
 local sign_define = vim.fn.sign_define
 
 d.config({
+  severity_sort = false,
   signs = true,
   underline = true,
-  update_in_insert = false,
-  severity_sort = false,
+  update_in_insert = true,
+  virtual_lines = true,
   virtual_text = true, -- lsp_line will do this.
 }, nil)
 

@@ -1,4 +1,6 @@
----  - Yago Riveiro's vim configuration
+---  - Felipe Silveira's vim configuration
+---
+--- fokerd from Yago Riveiro's (https://github.com/yriveiro/nvim-files)
 --
 -- Overarching Philosophy:
 -- 1. Prefer the defaults

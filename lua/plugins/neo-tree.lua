@@ -24,7 +24,7 @@ return {
         git_status = {
           symbols = {
             -- Change type
-            added = icons.gitAdd, -- or "✚", but this is redundant ino if you use git_status_colors on the name
+            added = icons.gitAdd,       -- or "✚", but this is redundant ino if you use git_status_colors on the name
             modified = icons.gitChange, -- or "", but this is redundant info if you use git_status_colors on the name
             deleted = icons.gitDeleted, -- this can only be used in the git_status source
             renamed = icons.gitRenamed, -- this can only be used in the git_status source

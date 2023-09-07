@@ -38,7 +38,7 @@ _M.init = function()
   local onenord_exists, onenord = pcall(require, 'onenord')
   if onenord_exists then
     onenord.setup {
-      borders = false,
+      borders = true,
       fade_nc = true,
       styles = {
         comments = 'italic',
@@ -50,7 +50,7 @@ _M.init = function()
       },
       disable = {
         background = false,
-        cursorline = false,
+        cursorline = true,
         eob_lines = true,
       },
       custom_highlights = {

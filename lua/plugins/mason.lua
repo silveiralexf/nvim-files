@@ -15,8 +15,10 @@ return {
       ensure_installed = {
         'bashls',
         'dockerls',
+        'dockerls',
         'gopls',
         'grammarly',
+        'helm_ls',
         'jdtls',
         'jsonls',
         'lua_ls',
@@ -25,9 +27,7 @@ return {
         'taplo',
         'terraformls',
         'tflint',
-        'dockerls',
         'yamlls',
-        'helm_ls',
       },
     }
   end,

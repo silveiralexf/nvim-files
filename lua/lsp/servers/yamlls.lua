@@ -12,7 +12,11 @@ local opts = {
       completion = true,
       hover = true,
       schemas = {
-        ['https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json'] = '**/argo/**.yaml',
+        ['https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json'] = {
+          '**/argo/**.yaml',
+          '**dag**.yaml',
+          '**workflow**.yaml',
+        },
       },
     },
   },

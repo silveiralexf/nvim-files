@@ -95,9 +95,19 @@ vim.api.nvim_create_autocmd('BufEnter', {
 })
 
 vim.api.nvim_create_autocmd('BufRead,BufNewFile', {
-  pattern = { '*/templates/*.yml','*/templates/*.yaml', '*/templates/*.tpl', '*.gotmpl', 'helmfile*.yaml' },
+  pattern = {
+    '*/templates/*.yml',
+    '*/templates/*.yaml',
+    '*/charts/*.yaml',
+    '*/charts/*/*.yaml',
+    '*/releases/*/*/*.yaml',
+    '*/releases/*/*.yaml',
+    '*/releases/*.yaml',
+    '*/templates/*.tpl',
+    '*.gotmpl',
+    'helmfile*.yaml',
+  },
   callback = function()
     vim.opt_local.filetype = 'helm'
   end,
 })
-

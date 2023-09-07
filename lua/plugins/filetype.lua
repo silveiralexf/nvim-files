@@ -7,7 +7,7 @@ return {
       extensions = {
         sh = 'sh',
         xml = 'xml',
-        sls = 'sls'
+        sls = 'sls',
       },
       shebang = {
         -- Set the filetype of files with a dash shebang to sh
