@@ -38,15 +38,29 @@ return {
         },
       },
       window = {
+        position = 'right',
+        width = 50,
         mappings = {
           ['v'] = 'open_vsplit',
           ['h'] = 'open_split',
           ['s'] = 'open_with_window_picker',
+          ['t'] = 'open_tabnew',
         },
       },
       filesystem = {
         follow_current_file = true,
         use_libuv_file_watcher = true,
+        always_show = {
+          '.gitignore',
+          '.env',
+        },
+        never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
+          '.DS_Store',
+          'thumbs.db',
+        },
+        never_show_by_pattern = { -- uses glob style patterns
+          '.null-ls_*',
+        },
       },
       buffers = {
         follow_current_file = true,
@@ -72,6 +86,7 @@ return {
           buftype = { 'terminal', 'quickfix', 'nofile', 'Outline' },
         },
       },
+      other_win_hl_color = '#e35e4f',
     }
   end,
 }
